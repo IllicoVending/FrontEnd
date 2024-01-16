@@ -1,0 +1,8 @@
+
+//Si erreur dans le formulaire
+.red-container::placeholder  {
+    color: red;
+}
+.red-container{
+    border:2px solid red !important;
+}

@@ -1,0 +1,40 @@
+<h1 class="title">Illico Vending</h1>
+<form [formGroup]="inscriptionForm" (ngSubmit)="inscription()">
+    
+    <div class="field">
+        <input type="text" formControlName="name" [ngClass]="{'red-container': inscriptionForm.get('name')?.touched && inscriptionForm.get('name')?.errors?.['required']}" placeholder="name">
+    </div>
+
+    <div class="field">
+        <input type="text" formControlName="email" placeholder="email"
+        [ngClass]="{'red-container': inscriptionForm.get('email')?.touched && inscriptionForm.get('email')?.errors?.['required'] || inscriptionForm.get('email')?.errors?.['pattern']}">
+        @if(inscriptionForm.get('email')?.errors?.['pattern']){
+            <p style="color: red;">Mauvais format</p>
+        }
+    </div>
+
+    <div class="field">
+        <input type="text" formControlName="phoneNumber" [ngClass]="{'red-container': inscriptionForm.get('phoneNumber')?.touched && inscriptionForm.get('phoneNumber')?.errors?.['required']}" placeholder="phoneNumber">
+    </div>
+
+    <div class="field">
+        <input type="text" formControlName="address" [ngClass]="{'red-container': inscriptionForm.get('address')?.touched && inscriptionForm.get('address')?.errors?.['required']}" placeholder="address">
+    </div>
+
+    <div class="field">
+        <input type="text" formControlName="city" [ngClass]="{'red-container': inscriptionForm.get('city')?.touched && inscriptionForm.get('city')?.errors?.['required']}" placeholder="city">
+    </div>
+
+    <div class="field">
+        <input type="text" formControlName="postCode" [ngClass]="{'red-container': inscriptionForm.get('postCode')?.touched && inscriptionForm.get('postCode')?.errors?.['required']}" placeholder="postCode">
+    </div>
+
+    <div class="field">
+        <input type="password" formControlName="password" [ngClass]="{'red-container': inscriptionForm.get('password')?.touched && inscriptionForm.get('password')?.errors?.['required']}" placeholder="password">
+    </div>
+    <div class="all-Btn">
+        <button routerLink="/inscription">Connexion</button>
+        <button type="submit"> Inscription</button>     
+    </div>
+    
+</form>
