@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder,FormGroup,FormsModule,ReactiveFormsModule,Validators} from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../shared/services/api.service';
 
 @Component({
   selector: 'app-connection',
@@ -16,13 +16,13 @@ export class ConnectionComponent {
     loginForm : FormGroup;
     router = inject(Router);
 
-constructor(private _fb : FormBuilder, private _apiService : ApiService){
+constructor(private _fb : FormBuilder){
   this.loginForm = this._fb.group({
       email : [null, [Validators.required,Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)]],
       password : [null, [Validators.required]]
   })
 }
-
+/*
 login(){
   if(this.loginForm.valid){
 
@@ -47,4 +47,6 @@ login(){
   }
 
 }
+*/
+login(){}
 }

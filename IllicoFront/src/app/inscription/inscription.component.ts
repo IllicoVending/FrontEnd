@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder,FormGroup,FormsModule,ReactiveFormsModule,Validators} from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../shared/services/api.service';
 
 @Component({
   selector: 'app-inscription',
