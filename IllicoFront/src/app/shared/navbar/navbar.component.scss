@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #231B4F;
+    width: 100vw;
+    height: 50px;
+}
+
+.content_header {
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    margin-right: 25px;
+}
+
+.item_nav {
+    font-size: 22px;
+    font-weight: 600;
+}

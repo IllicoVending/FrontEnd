@@ -1,8 +1,13 @@
-<h1>test products from backend</h1>
+<div class="center_page_element">
 
-<div class="container">
-    <h2>Liste des produits</h2>
-    <ul>
-       <li *ngFor="let product of products">{{ product.name }}</li>
-    </ul>
+    <h1>test products from backend</h1>
+
+        <h2>Liste des produits</h2>
+        <ul class="margin_bottom">
+           <li class="product_fiche" *ngFor="let product of products">
+            <div class="product_image">{{ product.image }}</div>
+            <div class="product_name">{{ product.name }}</div>
+            <div class="product_price">{{ product.price }}</div>
+            </li>
+        </ul>
 </div>

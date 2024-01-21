@@ -16,22 +16,28 @@ export class ConnectionComponent {
     loginForm : FormGroup;
     router = inject(Router);
 
-constructor(private _fb : FormBuilder){
+constructor(private _fb : FormBuilder,private _apiService : ApiService){
   this.loginForm = this._fb.group({
       email : [null, [Validators.required,Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)]],
       password : [null, [Validators.required]]
   })
 }
-/*
+
 login(){
   if(this.loginForm.valid){
+      const loginInfo = {
+      email : this.loginForm.get("email")?.value,
+      password : this.loginForm.get("password")?.value
+      } 
 
-    this._apiService.login(this.loginForm.value).subscribe({
+    this._apiService.login(loginInfo).subscribe({
       next : (data) => {
+
         // Login successful, handle the token as needed
         const token = data.token;
         // Store the token in a secure way (e.g., localStorage)
         localStorage.setItem('token', token);
+        console.log(data);
 
         // Redirect or perform other necessary actions
         this.router.navigateByUrl("home");
@@ -47,6 +53,4 @@ login(){
   }
 
 }
-*/
-login(){}
 }

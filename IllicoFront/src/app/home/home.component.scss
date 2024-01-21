@@ -1,0 +1,18 @@
+.product_fiche {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 10px;
+
+    border: solid 1px red;
+}
+
+.product_image {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 150px;
+    border: solid 1px red;
+}

@@ -4,8 +4,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
-    {path : "", component : HomeComponent},
+    {path : "", component : ConnectionComponent},
     {path : "inscription", component : InscriptionComponent},
-    {path : "connection", component : ConnectionComponent},
+    {path : "home", component : HomeComponent},
     {path : "**",redirectTo : "/notfound"}
 ];
